@@ -3,11 +3,37 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import About from './pages/About/index.js';
+import Dashboard from './pages/Dashboard/index.js';
+import Stock from './pages/Stock/index.js';
+import {
+  createBrowserRouter,
+  RouterProvider
+} from 'react-router-dom'
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App/>,
+    children: [
+      {
+        path: "/about",
+        element: <h1>This works</h1>
+      }
+    ]
+  }
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// / - render dashboard
+// /about - render about
+// /stocks/:symbol - render a single stock
+
+
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}/>
   </React.StrictMode>
 );
 
