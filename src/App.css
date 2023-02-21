@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+#button
+{
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+#nav
+{
+  background: rgb(73, 167, 255);
+}

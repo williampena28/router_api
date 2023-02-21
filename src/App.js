@@ -10,8 +10,10 @@ function App() {
     <div className="App">
       <nav id='nav'>
         <h1>Router App</h1>
-        <Link to='/'><button>Home Page</button></Link>
-        <Link to='/about'><button>About</button></Link>
+        <div className='nav-buttons'>
+          <Link to='/stock'><button id='button'>Home Page</button></Link>
+          <Link to='/about'><button id='button'>About</button></Link>
+        </div>
       </nav>
       <Outlet/>
     </div>

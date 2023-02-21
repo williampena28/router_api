@@ -1,4 +1,6 @@
-.sectionLine
+.stock-container
 {
-    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    line-height: 20px;
 }
