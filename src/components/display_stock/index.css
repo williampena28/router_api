@@ -1,0 +1,6 @@
+.stock-container
+{
+    display: flex;
+    justify-content: space-evenly;
+    line-height: 20px;
+}

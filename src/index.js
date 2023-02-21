@@ -9,6 +9,7 @@ import {
   createBrowserRouter,
   RouterProvider
 } from 'react-router-dom'
+import DisplayStock from './components/display_stock';
 import { Link } from 'react'
 
 const router = createBrowserRouter([
@@ -17,12 +18,16 @@ const router = createBrowserRouter([
     element: <App/>,
     children: [
       {
+        path: "/",
+        element: <Dashboard/>
+      },
+      {
         path: "/about",
         element: <About/>
       },
       {
-        path: "/stock",
-        element: <Dashboard/>
+        path: "/stock/:symbol",
+        element: <DisplayStock/>
       }
     ]
   }
