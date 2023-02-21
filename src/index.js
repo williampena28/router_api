@@ -5,7 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import About from './pages/About/index.js';
 import Dashboard from './pages/Dashboard/index.js';
-import Stock from './pages/Stock/index.js';
 import {
   createBrowserRouter,
   RouterProvider
@@ -22,12 +21,8 @@ const router = createBrowserRouter([
         element: <About/>
       },
       {
-        path: "/dashboard",
-        element: <Dashboard/>
-      },
-      {
         path: "/stock",
-        element: <Stock/>
+        element: <Dashboard/>
       }
     ]
   }

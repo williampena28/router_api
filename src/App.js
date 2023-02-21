@@ -9,10 +9,9 @@ function App() {
   return (
     <div className="App">
       <nav id='nav'>
-        <h1>Nav Bar</h1>
+        <h1>Router App</h1>
         <Link to='/'><button>Home Page</button></Link>
         <Link to='/about'><button>About</button></Link>
-        <Link to='/dashboard'><button>Dashboard</button></Link>
       </nav>
       <Outlet/>
     </div>
