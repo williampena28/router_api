@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './index.css'
 import stocks from './../../data.js'
 
 const Dashboard = () => {
 
+  // declare navigate
+  const navigate = useNavigate();
+
   // make an empty array where we'll put our stock data with useState
   const [stocksList, setStockList] = useState([]);
+
+
 
   // set the stockLists array with useEffect
   useEffect(() =>
@@ -25,10 +31,21 @@ const Dashboard = () => {
   //   )
   // })
 
+  // const handleClick = () =>
+  // {
+
+  //   // click on the stock from the dashboard
+  //   // get data from the clicked stock and pass it to the DisplayStock component
+  //   // redirect to the /stock/:symbol route
+  //   // display the data that was passed onto the new component onto the webpage
+
+
+  // }
+
   const stockNameJSX = stocksList.map((stock, index) =>
   {
     return(
-      <div className='stock-name-container' key={index}>
+      <div className='stock-name-container' key={index} onClick={() => navigate(`/stock/${stock.symbol}`)}>
         <p>{stock.name} {stock.symbol}</p>
       </div>
     )

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import { useNavigate } from "react-router-dom";
 import stocks from './../../data.js'
+// useParams hook to get the param data from the url
+import { useParams } from 'react-router-dom';
 
-const DisplayStock = (props) => {
+const DisplayStock = () => {
 
-  // declare navigate
-  const navigate = useNavigate();
+  // put symbol data into symbolId from the url
+  let symbolId = useParams();
 
   const [stocksList, setStockList] = useState([])
 
@@ -16,7 +17,7 @@ const DisplayStock = (props) => {
 
   const stockDataJSX = stocksList.map((stock, index) =>
   {
-    if(stock.name === props.name)
+    if(stock.symbol == symbolId.symbol)
     {
       return(
         <div className='stock-container' key={index}>
@@ -29,7 +30,7 @@ const DisplayStock = (props) => {
   // console.log(stocksList);
 
   return (
-    <div>DisplayStock</div>
+    <div>{stockDataJSX}</div>
   )
 }
 
